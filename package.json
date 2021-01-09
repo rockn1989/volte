@@ -7,13 +7,14 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET NODE_ENV=development & node \"./gulpfile.js\"",
-    "build": "SET NODE_ENV=production & node \"./gulpfile.js\""
+    "start": "cross-env NODE_ENV=development node ./gulpfile.js",
+    "build": "cross-env NODE_ENV=production node ./gulpfile.js"
   },
   "author": "Ryabkov Artem",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.12",
+    "cross-env": "^7.0.3",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
