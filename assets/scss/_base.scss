@@ -1,0 +1,19 @@
+html,
+body {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $mainFont;
+  color: $black;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 25px;
+  max-width: 15px;
+}

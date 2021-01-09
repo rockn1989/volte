@@ -1,0 +1,15 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+		"no-console": "off"
+  },
+	"globals":{
+			"jQuery":"readonly",
+			"$": "readonly"
+	},
+	"env": {
+    "browser": true,
+    "node": true,
+		"es6": true
+	}
+}
