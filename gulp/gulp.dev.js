@@ -3,7 +3,6 @@ import {
 	twig,
 	sync,
 	autoprefixer,
-	gcmq,
 	sass,
   stylelint,
 	del,
