@@ -1,24 +1,43 @@
+/**
+ * Base plugins
+ */
 import gulpCollector from "gulp";
-
-import twig from "gulp-twig";
 import sync from "browser-sync";
-import autoprefixer from "gulp-autoprefixer";
-import stylelint from "gulp-stylelint";
-import prettyHtml from "gulp-pretty-html";
-import gcmq from "gulp-group-css-media-queries";
-import sass from "gulp-sass";
 import rename from "gulp-rename";
 import copy from "gulp-copy";
 import clean from "gulp-clean";
 import del from "del";
-import webp from "gulp-webp";
-import imageMin from "gulp-imagemin";
-import svgstore from "gulp-svgstore";
-import minify from "gulp-csso";
 import change from "gulp-changed";
 import plumber from "gulp-plumber";
-import eslint from "gulp-eslint";
+
+/**
+ * Html plugins
+ */
+import twig from "gulp-twig";
+import prettyHtml from "gulp-pretty-html";
+
+/**
+ * Styles plugins
+ */
+import sass from "gulp-sass";
+import gcmq from "gulp-group-css-media-queries";
+import minify from "gulp-csso";
+import autoprefixer from "gulp-autoprefixer";
 import critical from "critical";
+
+/**
+ * Images plugins
+ */
+import svgstore from "gulp-svgstore";
+import imageMin from "gulp-imagemin";
+import webp from "gulp-webp";
+
+/**
+ * Linters plugins
+ */
+import eslint from "gulp-eslint";
+import stylelint from "gulp-stylelint";
+
 const gulp = gulpCollector;
 
 export {
