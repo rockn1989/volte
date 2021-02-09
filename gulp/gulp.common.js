@@ -11,32 +11,35 @@ import rename from "gulp-rename";
 import copy from "gulp-copy";
 import clean from "gulp-clean";
 import del from "del";
+import webp from "gulp-webp";
 import imageMin from "gulp-imagemin";
 import svgstore from "gulp-svgstore";
 import minify from "gulp-csso";
 import change from "gulp-changed";
 import plumber from "gulp-plumber";
 import eslint from "gulp-eslint";
-
+import critical from "critical";
 const gulp = gulpCollector;
 
 export {
-	gulp,
-	twig,
-	sync,
-	autoprefixer,
-	prettyHtml,
-	gcmq,
-	sass,
+  gulp,
+  twig,
+  sync,
+  autoprefixer,
+  prettyHtml,
+  gcmq,
+  sass,
   stylelint,
-	rename,
-	clean,
-	copy,
-	del,
-	imageMin,
-	svgstore,
-	minify,
-	change,
-	eslint,
-  plumber
+  critical,
+  rename,
+  clean,
+  copy,
+  del,
+  imageMin,
+  webp,
+  svgstore,
+  minify,
+  change,
+  eslint,
+  plumber,
 };
