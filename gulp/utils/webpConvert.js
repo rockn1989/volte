@@ -5,9 +5,9 @@ import { gulp, clean, webp } from "../gulp.common.js";
  */
 const webpConvert = () => {
   return gulp
-    .src("assets/img/media/**.{png,jpg,gif}")
+    .src("./assets/img/webp/*.{png,jpg,gif}")
     .pipe(webp())
-    .pipe(gulp.dest("dist/img/media/webp/"));
+    .pipe(gulp.dest("./dist/img/webp/"));
 };
 
 /**
@@ -15,7 +15,7 @@ const webpConvert = () => {
  */
 const cleanFolder = () => {
   return gulp
-    .src("./dist/img/media/webp", { allowEmpty: true })
+    .src("./dist/img/webp", { allowEmpty: true })
     .pipe(clean({ read: false }));
 };
 

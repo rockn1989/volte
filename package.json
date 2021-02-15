@@ -8,7 +8,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development node ./gulpfile.js",
-    "build": "cross-env NODE_ENV=production node ./gulpfile.js"
+    "build": "cross-env NODE_ENV=production node ./gulpfile.js",
+    "webp": "cross-env node ./gulp/utils/webpConvert.js",
+    "critical": "cross-env node ./gulp/utils/criticalCss.js"
   },
   "author": "Ryabkov Artem",
   "license": "ISC",

@@ -25,7 +25,7 @@ const criticalCss = () => {
  */
 const cleanFolder = () => {
   return gulp
-    .src("./build/index.html", { allowEmpty: true })
+    .src("./build/*.html", { allowEmpty: true })
     .pipe(clean({ read: false }));
 };
 
