@@ -13,6 +13,7 @@ import {
   change,
   eslint,
   plumber,
+  sourceMap
 } from "./gulp.common.js";
 
 /**
@@ -63,7 +64,9 @@ export const scss = () => {
   return gulp
     .src("assets/scss/main.scss")
     .pipe(plumber())
+    .pipe(sourceMap.init())
     .pipe(sass())
+    .pipe(sourceMap.write())
     .pipe(rename("style.css"))
     .pipe(
       autoprefixer({

@@ -1,12 +1,35 @@
 import {
 	gulp,
+  sass,
+  sourceMap,
+  plumber,
 	prettyHtml,
+  autoprefixer,
 	rename,
 	clean,
 	imageMin,
 	minify,
   gcmq
 } from './gulp.common.js';
+
+/**
+ * Styles
+ */
+export const scss = () => {
+  return gulp
+    .src("assets/scss/main.scss")
+    .pipe(plumber())
+    .pipe(sourceMap.init())
+    .pipe(sass())
+    .pipe(sourceMap.write({addComment: false}))
+    .pipe(rename("style.css"))
+    .pipe(
+      autoprefixer({
+        cascade: true,
+      })
+    )
+    .pipe(gulp.dest("build/css"));
+};
 
 
 
@@ -15,7 +38,7 @@ import {
  */
 export const cssMin = () => {
 	return gulp
-		.src("dist/css/style.css")
+		.src("build/css/style.css")
 		.pipe(minify())
 		.pipe(rename('style.min.css'))
 		.pipe(gulp.dest("build/css"));
@@ -27,7 +50,7 @@ export const cssMin = () => {
  */
 export const prettyCss = () => {
   return gulp
-    .src("./dist/css/style.css")
+    .src("./build/css/style.css")
     .pipe(gcmq())
     .pipe(gulp.dest("./build/css"));
 };
@@ -103,6 +126,7 @@ const build = gulp.series(
 	gulp.series(
 		copyFiles,
 		prettyHTML,
+    scss,
     prettyCss,
 		cssMin,
     imagesMin

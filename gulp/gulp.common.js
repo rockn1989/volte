@@ -38,6 +38,12 @@ import webp from "gulp-webp";
 import eslint from "gulp-eslint";
 import stylelint from "gulp-stylelint";
 
+
+/**
+ * Source map
+ */
+import sourceMap from 'gulp-sourcemaps';
+
 const gulp = gulpCollector;
 
 export {
@@ -61,4 +67,5 @@ export {
   change,
   eslint,
   plumber,
+  sourceMap
 };

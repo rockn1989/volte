@@ -10,9 +10,9 @@ const criticalCss = () => {
     src: "index.html",
     minify: true,
     target: {
-      css: "critical.css",
-      html: "index-critical.html",
-      uncritical: "uncritical.css",
+      css: "css/critical.css",
+      html: "index.html",
+      uncritical: "css/style.css",
     },
     width: 320,
     height: 480,
