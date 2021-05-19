@@ -1,11 +1,32 @@
 .container {
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 #{$gutter};
   max-width: $containerWidth;
+  @media (min-width: $tablet-w) {
+    padding: 0 #{$gutter * 3};
+  }
+  @media (min-width: $desk-w) {
+    padding: 0 #{$gutter * 4};
+  }
+  &--full {
+    padding: 0;
+  }
 }
 
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-align-c {
+  align-items: center;
+}
+
+.d-flex-sb {
+  justify-content: space-between;
 }

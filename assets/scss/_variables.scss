@@ -1,14 +1,15 @@
-$mob-xs: 0px;
+$mob-xs: 320px;
 $mob-s: 640px;
-$tablet-w: 960px;
-$desk-w: 1200px;
+$tablet-w: 768px;
+$desk-w: 960px;
 
-$mainFont: Roboto, sans-serif;
-$fontSize: 16px;
-$lineHeight: 18px;
+$mainFont: "GraphikLc";
+$fontSize: 15px;
+$lineHeight: 24px;
 
 $black: #000000;
 $white: #ffffff;
-$green: #5ee395;
+$green: #00b956;
 
-$containerWidth: 1440px;
+$containerWidth: 1280px;
+$gutter: 20px;

@@ -12,6 +12,15 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+}
+
 main {
   flex-grow: 1;
 }

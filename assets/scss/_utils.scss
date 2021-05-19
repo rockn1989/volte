@@ -1,0 +1,5 @@
+.hidden-lg {
+  @media (min-width: $desk-w) {
+    display: none !important;
+  }
+}

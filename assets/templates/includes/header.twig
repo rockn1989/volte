@@ -1,7 +1,89 @@
 {% block content %}
 
 	<header class="header">
-		<h1>Header2121</h1>
+
+		<div class="header__top-bar">
+			<div class="container container--full">
+				<div class="header__top-bar-inner d-flex d-flex-sb d-flex-align-c">
+					<nav class="service-menu">
+						<a class="service-menu__title">Все сайты
+							<i class="service-menu__button"></i>
+						</a>
+						<ul class="service-menu__list">
+							<li>
+								<a href="#">Частным клиентам</a>
+							</li>
+							<li>
+								<a href="#">Корпоративным клентам</a>
+							</li>
+							<li>
+								<a href="#">Инвесторам и прессе</a>
+							</li>
+							<li>
+								<a href="#">Интернет-магазин</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="dropdown-select">
+						<a href="#" class="dropdown-select__item">Московский регион
+							<i class="dropdown-select__button"></i>
+						</a>
+						<ul class="dropdown-select__list">
+							<li>
+								<a href="">Ярославль</a>
+							</li>
+							<li>
+								<a href="">Екатеринбур</a>
+							</li>
+							<li>
+								<a href="">Санкт-Петербург</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="header__bottom-bar">
+			<div class="container">
+				<div class="header__bottom-bar-inner d-flex d-flex-sb d-flex-align-c">
+					<a href="/" class="logo">
+						<picture>
+							<source media="(min-width: 960px)" srcset="img/logo.svg">
+							<source media="(min-width: 320px)" srcset="img/logo-mobile.svg">
+							<img src="img/logo.svg" alt="">
+						</picture>
+					</a>
+					<ul class="mobile-menu hidden-lg">
+						<li>
+							<a href="#">
+								<svg width="19px" height="22px" class="icon-search">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#search"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="22px" height="14px" class="icon-account">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#account"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg width="24px" height="21px" class="icon-hamburger">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#hamburger"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
 	</header>
 
 {% endblock %}
