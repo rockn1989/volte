@@ -14,6 +14,7 @@ h1,
 
 h2,
 .title-h2 {
+  margin: 0 0 20px;
   @media (min-width: $mob-xs) {
     font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1240 - 320)));
     line-height: calc(28px + (40 - 28) * ((100vw - 320px) / (1240 - 320)));
@@ -44,4 +45,8 @@ h5,
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }

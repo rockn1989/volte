@@ -1,0 +1,23 @@
+.advantages-section {
+  &__inner {
+    flex-wrap: wrap;
+    & > * {
+      @media (min-width: $tablet-w) {
+        width: 50%;
+      }
+    }
+  }
+  &__desc {
+    margin-bottom: 60px;
+    @media (min-width: $tablet-w) {
+      margin-bottom: 0;
+      padding-right: #{$gutter * 3.5};
+    }
+    .title-h2 {
+      font-weight: 300;
+      @media (min-width: $tablet-w) {
+        margin-bottom: 74px;
+      }
+    }
+  }
+}
