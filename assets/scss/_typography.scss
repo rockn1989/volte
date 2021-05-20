@@ -1,14 +1,27 @@
 h1,
 .title-h1 {
-  font-size: 52px;
-  line-height: 56px;
+  margin: 0 0 20px;
   font-weight: bold;
+  @media (min-width: $mob-xs) {
+    font-size: calc(28px + (52 - 28) * ((100vw - 320px) / (1240 - 320)));
+    line-height: calc(34px + (56 - 34) * ((100vw - 320px) / (1240 - 320)));
+  }
+  @media (min-width: $desk-w) {
+    font-size: 52px;
+    line-height: 56px;
+  }
 }
 
 h2,
 .title-h2 {
-  font-size: 32px;
-  line-height: 40px;
+  @media (min-width: $mob-xs) {
+    font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1240 - 320)));
+    line-height: calc(28px + (40 - 28) * ((100vw - 320px) / (1240 - 320)));
+  }
+  @media (min-width: $desk-w) {
+    font-size: 32px;
+    line-height: 40px;
+  }
   font-weight: 600;
 }
 
