@@ -1,0 +1,124 @@
+.slider {
+  position: relative;
+  display: flex;
+  &__current-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center 0;
+    background-size: cover;
+    display: none;
+    transition: filter 0.65s ease;
+    will-change: background-image;
+    @media (min-width: $tablet-w) {
+      display: block;
+    }
+  }
+  &:first-child :not(.slider__current-img) {
+    border-left: none;
+  }
+  &:last-child {
+    border-right: none;
+  }
+  &__controls {
+    z-index: 150;
+  }
+  &__arrow {
+    position: absolute;
+    right: 180px;
+    bottom: 40px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: translateX(10px);
+    }
+    svg {
+      color: $white;
+    }
+  }
+  &__dots {
+    @media (min-width: $tablet-w) {
+      display: none;
+    }
+  }
+}
+
+.fadeIn {
+  filter: blur(20px);
+}
+
+.slide {
+  position: relative;
+  height: 650px;
+  color: $white;
+  flex-basis: 17%;
+  flex-grow: 1;
+  transition: flex-basis 0.4s ease-out;
+  border-right: 1px solid $white;
+  border-left: 1px solid $white;
+  cursor: pointer;
+  &__img {
+    position: static;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+  }
+  &__desc {
+    position: relative;
+    height: 100%;
+    z-index: 20;
+  }
+  &__text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: inherit;
+  }
+  &__title {
+    max-width: 380px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__subtitle {
+    max-width: 220px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  &-current {
+    flex-basis: 66%;
+    flex-grow: 2;
+    .slide__img {
+      z-index: 19;
+      img {
+        opacity: 1;
+      }
+    }
+    .slide__text {
+      top: 80px;
+      left: 80px;
+    }
+    .slide__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .slide__subtitle {
+      opacity: 1;
+    }
+  }
+}
