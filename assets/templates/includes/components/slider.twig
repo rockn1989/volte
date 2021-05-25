@@ -5,45 +5,47 @@
 
 			<div class="slider__current-img"></div>
 
-			<div class="slide slide-current">
-				<div class="slide__img">
-					<picture>
-						<source media="(min-width: 768px)" srcset="img/slider/slide-img-1.jpg 1x, img/slider/slide-img-1@2x.jpg 2x">
-						<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-1.jpg 1x, img/slider/slide-img-mob-1@2x.jpg 2x">
-						<img src="img/slider/slide-img-1.jpg" srcset="img/slider/slide-img-1@2.jpg 2x" alt="VoLTE" loading="lazy">
-					</picture>
+			<div class="slider__inner">
+				<div class="slide slide-current">
+					<div class="slide__img">
+						<picture>
+							<source media="(min-width: 768px)" srcset="img/slider/slide-img-1.jpg 1x, img/slider/slide-img-1@2.jpg 2x">
+							<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-1.jpg 1x, img/slider/slide-img-mob-1@2.jpg 2x">
+							<img src="img/slider/slide-img-1.jpg" srcset="img/slider/slide-img-1@2.jpg 2x" alt="VoLTE" loading="lazy">
+						</picture>
+					</div>
+					<div class="slide__text">
+						<div class="slide__title">Наслаждайтесь чистым звуком</div>
+						<div class="slide__subtitle">Даже если между вам тысячи километров</div>
+					</div>
 				</div>
-				<div class="slide__text">
-					<div class="slide__title">Наслаждайтесь чистым звуком</div>
-					<div class="slide__subtitle">Даже если между вам тысячи километров</div>
-				</div>
-			</div>
 
-			<div class="slide">
-				<div class="slide__img">
-					<picture>
-						<source media="(min-width: 768px)" srcset="img/slider/slide-img-2.jpg 1x, img/slider/slide-img-2@2x.jpg 2x">
-						<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-2.jpg 1x, img/slider/slide-img-mob-2@2x.jpg 2x">
-						<img src="img/slider/slide-img-2.jpg" srcset="img/slider/slide-img-2@2.jpg 2x" alt="VoLTE" loading="lazy">
-					</picture>
+				<div class="slide">
+					<div class="slide__img">
+						<picture>
+							<source media="(min-width: 768px)" srcset="img/slider/slide-img-2.jpg 1x, img/slider/slide-img-2@2.jpg 2x">
+							<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-2.jpg 1x, img/slider/slide-img-mob-2@2.jpg 2x">
+							<img src="img/slider/slide-img-2.jpg" srcset="img/slider/slide-img-2@2.jpg 2x" alt="VoLTE" loading="lazy">
+						</picture>
+					</div>
+					<div class="slide__text">
+						<div class="slide__title">Несколько дел одновременно</div>
+						<div class="slide__subtitle">Даже если между вам тысячи километров</div>
+					</div>
 				</div>
-				<div class="slide__text">
-					<div class="slide__title">Несколько дел одновременно</div>
-					<div class="slide__subtitle">Даже если между вам тысячи километров</div>
-				</div>
-			</div>
 
-			<div class="slide">
-				<div class="slide__img">
-					<picture>
-						<source media="(min-width: 768px)" srcset="img/slider/slide-img-3.jpg 1x, img/slider/slide-img-3@2x.jpg 2x">
-						<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-3.jpg 1x, img/slider/slide-img-mob-3@2x.jpg 2x">
-						<img src="img/slider/slide-img-3.jpg" srcset="img/slider/slide-img-3@2.jpg 2x" alt="VoLTE" loading="lazy">
-					</picture>
-				</div>
-				<div class="slide__text">
-					<div class="slide__title">Больше времени на общение</div>
-					<div class="slide__subtitle">Даже если между вам тысячи километров</div>
+				<div class="slide">
+					<div class="slide__img">
+						<picture>
+							<source media="(min-width: 768px)" srcset="img/slider/slide-img-3.jpg 1x, img/slider/slide-img-3@2x.jpg 2x">
+							<source media="(min-width: 320px)" srcset="img/slider/slide-img-mob-3.jpg 1x, img/slider/slide-img-mob-3@2.jpg 2x">
+							<img src="img/slider/slide-img-3.jpg" srcset="img/slider/slide-img-3@2.jpg 2x" alt="VoLTE" loading="lazy">
+						</picture>
+					</div>
+					<div class="slide__text">
+						<div class="slide__title">Больше времени на общение</div>
+						<div class="slide__subtitle">Даже если между вам тысячи километров</div>
+					</div>
 				</div>
 			</div>
 			<div class="slider__controls">
@@ -52,7 +54,17 @@
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#arrow-right"></use>
 					</svg>
 				</div>
-				<ul class="slider__dots"></ul>
+				<ul class="slider__dots">
+					<li class="active">
+						<a href="#">Slide-1</a>
+					</li>
+					<li>
+						<a href="#">Slide-2</a>
+					</li>
+					<li>
+						<a href="#">Slide-3</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
