@@ -1,0 +1,8 @@
+.tariffs-section {
+  &__desc {
+    margin-bottom: 40px;
+    @media (min-width: $tablet-w) {
+      max-width: 40%;
+    }
+  }
+}
