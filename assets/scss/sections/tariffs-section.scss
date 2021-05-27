@@ -1,8 +1,20 @@
 .tariffs-section {
+  margin-bottom: 56px;
+  @media (min-width: $tablet-w) {
+    margin-bottom: 80px;
+  }
   &__desc {
     margin-bottom: 40px;
     @media (min-width: $tablet-w) {
       max-width: 40%;
     }
   }
+}
+
+.tariff-cards-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: visible;
 }

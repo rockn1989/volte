@@ -13,6 +13,7 @@ body {
 }
 
 a {
+  color: $black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -27,4 +28,8 @@ main {
 
 picture {
   display: block;
+}
+
+.icon-arrow-right-small {
+  transform: rotateY(180deg);
 }

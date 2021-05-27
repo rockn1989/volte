@@ -42,7 +42,7 @@
 .tabs-content {
   @include list-reset;
   padding: 30px 0;
-  li {
+  & > li {
     display: none;
     &.active-tab {
       display: block;

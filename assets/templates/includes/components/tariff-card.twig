@@ -1,0 +1,47 @@
+<ul class="tariff-cards-list">
+	{% for value in tariffData %}
+		<li>
+			<!-- begin tariff-card -->
+			<article class="tariff-card">
+				<header class="tariff-card__title">
+					<div class="title-h3">{{value.title}}</div>
+					<div class="tariff-card__stock">{{value.stock}}</div>
+				</header>
+				<section class="tariff-card__desc">
+					<div class="tariff-card__time">{{value.time}}</div>
+					<div class="tariff-card__about">
+						<div class="tariff-card__about-text">{{value.text}}</div>
+						<ul class="tariff-card__service-list">
+							{% for icon in value.icons|split(',') %}
+
+								<li>
+									<svg width="36px" height="36px" class="{{icon}}">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#{{icon}}"></use>
+									</svg>
+								</li>
+							{% endfor %}
+							{% if (value.icons|split(',')|length >= 4) %}
+								<li>+ еще 9
+								</li>
+							{% endif %}
+						</ul>
+					</div>
+					<div class="tariff-card__price">
+						{{value.price}}
+						<span class="tariff-card__price-subtitle">{{value.price_subtitle}}</span>
+					</div>
+				</section>
+				<div class="tariff-card__btns">
+					<a href="" class="btn">Подробнее</a>
+					<a href="">
+						Перейти в МегаФон
+						<svg width="10px" height="10px" class="icon-arrow-right-small">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#arrow-right-small"></use>
+						</svg>
+					</a>
+				</div>
+			</article>
+			<!-- end tariff-card -->
+		</li>
+	{% endfor %}
+</ul>
