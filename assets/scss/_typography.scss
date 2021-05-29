@@ -70,3 +70,25 @@ a.link-arrow {
     margin-left: 6px;
   }
 }
+
+ul:not([class]) {
+  @include list-reset;
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 15px;
+      height: 1px;
+      background: $black;
+      display: block;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
