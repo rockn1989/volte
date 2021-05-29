@@ -73,16 +73,5 @@
     .btn {
       margin-bottom: 16px;
     }
-
-    a:not([class]) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      line-height: 15px;
-      svg {
-        margin-left: 6px;
-      }
-    }
   }
 }

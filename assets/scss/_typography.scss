@@ -28,6 +28,7 @@ h2,
 
 h3,
 .title-h3 {
+  margin: 0 0 20px;
   font-size: 20px;
   line-height: 28px;
   font-weight: 500;
@@ -49,4 +50,19 @@ h5,
 
 p:last-child {
   margin-bottom: 0;
+}
+
+a:not([class]) {
+  color: #34aaf2;
+}
+
+a.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 15px;
+  svg {
+    margin-left: 6px;
+  }
 }

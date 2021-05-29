@@ -1,0 +1,30 @@
+.tel-card {
+  padding: 34px 24px 4px;
+  width: 255px;
+  border: 1px solid #ebedef;
+  &__img-wrapper {
+    position: relative;
+  }
+  &__promo {
+    position: absolute;
+    top: -20px;
+    right: calc(50% - 28px);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: $green;
+    border-radius: 50%;
+    transform: translateX(50%);
+  }
+  figure {
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}

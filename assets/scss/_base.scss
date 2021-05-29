@@ -30,6 +30,27 @@ picture {
   display: block;
 }
 
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 .icon-arrow-right-small {
   transform: rotateY(180deg);
+}
+
+.overflow-block {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: visible;
+  & > * {
+    flex-shrink: 0;
+  }
 }
