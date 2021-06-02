@@ -1,3 +1,16 @@
 .faq-section {
-  padding: 80px 0;
+  padding: 56px 0;
+  @media (min-width: $tablet-w) {
+    padding: 80px 0;
+  }
+  .title-h2 {
+    margin-bottom: 40px;
+    @media (min-width: $tablet-w) {
+      margin-bottom: 60px;
+      max-width: 305px;
+    }
+    @media (min-width: $desk-w) {
+      margin-bottom: 80px;
+    }
+  }
 }

@@ -4,6 +4,7 @@ body {
   line-height: $lineHeight;
   font-family: $mainFont;
   color: $black;
+  background-color: #ebedef;
 }
 
 *,
@@ -24,6 +25,9 @@ img {
 
 main {
   flex-grow: 1;
+  & > section {
+    background-color: $white;
+  }
 }
 
 picture {

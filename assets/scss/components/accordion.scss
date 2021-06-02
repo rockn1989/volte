@@ -8,7 +8,10 @@
   &__title {
     position: relative;
     display: block;
-    padding: 24px 66px 24px 24px;
+    padding: 18px 66px 18px 18px;
+    @media (min-width: $tablet-w) {
+      padding: 24px 66px 24px 24px;
+    }
     svg {
       position: absolute;
       top: 50%;
@@ -17,6 +20,7 @@
       transform: rotateX(180deg) translateY(50%);
       /* transition: transform 0.3s ease; */
       transform-origin: center;
+      pointer-events: none;
     }
     &.active {
       background-color: #ebedef;

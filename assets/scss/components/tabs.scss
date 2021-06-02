@@ -41,7 +41,8 @@
 
 .tabs-content {
   @include list-reset;
-  padding: 30px 0;
+  margin: 30px 0;
+  background-color: $white;
   & > li {
     display: none;
     &.active-tab {
