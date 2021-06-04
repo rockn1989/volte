@@ -13,5 +13,9 @@ Thumbs.db
 css/*.css
 dist/
 assets/
-assets/img/icon-svg/sprite-svg.svg
+gulp/
+.browserslistrc
+.editorconfig
+.eslintrc
+.stylelintrc
 todo.log
