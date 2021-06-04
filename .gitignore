@@ -12,6 +12,6 @@ Thumbs.db
 *.pdf
 css/*.css
 dist/
-build/
+assets/
 assets/img/icon-svg/sprite-svg.svg
 todo.log
