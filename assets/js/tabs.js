@@ -1,6 +1,6 @@
 const tabs = document.querySelectorAll(".tabs");
 
-Array.from(tabs).map((tab) => {
+[...tabs].map((tab) => {
   const tabs = [...tab.querySelectorAll("li")];
   const tabsContent = tab.nextElementSibling;
   const tabsContentLi = [...tabsContent.querySelectorAll("li")];

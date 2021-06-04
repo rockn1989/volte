@@ -5,8 +5,10 @@
     margin-bottom: 80px;
     padding: 80px 0;
   }
+
   &__inner {
     flex-wrap: wrap;
+
     .left-side,
     .right-side {
       width: 100%;
@@ -14,9 +16,11 @@
         width: 50%;
       }
     }
+
     .right-side {
       padding-top: 10px;
     }
+
     .left-side {
       @media (min-width: $tablet-w) {
         padding-right: 10%;
@@ -25,6 +29,7 @@
         padding-right: 18%;
       }
     }
+
     p {
       line-height: 20px;
     }

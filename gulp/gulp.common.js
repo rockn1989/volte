@@ -26,6 +26,14 @@ import autoprefixer from "gulp-autoprefixer";
 import critical from "critical";
 
 /**
+ * JS plugins
+ */
+import babel from "gulp-babel";
+import uglify from "gulp-uglify";
+import useref from "gulp-useref";
+import concat from "gulp-concat";
+
+/**
  * Images plugins
  */
 import svgstore from "gulp-svgstore";
@@ -38,11 +46,10 @@ import webp from "gulp-webp";
 import eslint from "gulp-eslint";
 import stylelint from "gulp-stylelint";
 
-
 /**
  * Source map
  */
-import sourceMap from 'gulp-sourcemaps';
+import sourceMap from "gulp-sourcemaps";
 
 const gulp = gulpCollector;
 
@@ -56,6 +63,10 @@ export {
   sass,
   stylelint,
   critical,
+  babel,
+  uglify,
+  useref,
+  concat,
   rename,
   clean,
   copy,
@@ -67,5 +78,5 @@ export {
   change,
   eslint,
   plumber,
-  sourceMap
+  sourceMap,
 };

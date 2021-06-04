@@ -1,7 +1,9 @@
 .footer {
   padding: 40px 10px 22px;
   flex-grow: 0;
+  flex-shrink: 0;
   color: #b1b6ba;
+
   @media (min-width: $tablet-w) {
     padding: 80px 10px 22px;
   }
@@ -15,9 +17,11 @@
 
   &__top-bar {
     margin-bottom: 20px;
+
     @media (min-width: $tablet-w) {
       margin-bottom: 50px;
     }
+
     .fast-links-list {
       @media (min-width: $tablet-w) {
         margin-top: -10px;
@@ -27,6 +31,7 @@
 
   &__bottom-bar {
     flex-direction: column;
+
     .copyright {
       order: 2;
     }
@@ -39,6 +44,7 @@
 
     @media (min-width: $mob-s) {
       flex-direction: row;
+
       .copyright {
         order: 1;
       }
@@ -53,6 +59,7 @@
   &__col {
     margin-bottom: 20px;
     width: 100%;
+
     @media (min-width: $mob-s) {
       width: auto;
     }
@@ -63,6 +70,10 @@
     font-size: 16px;
     line-height: 20px;
     color: #333333;
+
+    a {
+      color: inherit;
+    }
   }
 
   &__menu-list {
@@ -77,6 +88,7 @@
 
       a {
         color: #b1b6ba;
+
         &:hover {
           color: $black;
         }
@@ -94,6 +106,7 @@
 .copyright {
   display: inline-flex;
   align-items: center;
+
   &:before {
     content: "6+";
     margin-right: 16px;
@@ -129,12 +142,15 @@
       border-radius: 50%;
       text-decoration: none;
       transition: background-color 0.3s ease;
+
       svg {
         color: #535353;
         transition: color 0.3s ease;
       }
+
       &:hover {
         background-color: $green;
+
         svg {
           color: $white;
         }
@@ -148,9 +164,11 @@
 
   li {
     margin-bottom: 12px;
+
     &:last-child {
       margin-right: 0;
     }
+
     .svg-box {
       margin-right: 8px;
       width: 40px;
@@ -159,6 +177,7 @@
       align-items: center;
       justify-content: center;
     }
+
     a {
       display: inline-flex;
       align-items: center;
@@ -166,6 +185,7 @@
       text-decoration: none;
       transition: color 0.3s ease;
       color: #b1b6ba;
+
       svg {
         color: #535353;
         transition: color 0.3s ease;

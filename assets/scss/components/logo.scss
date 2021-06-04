@@ -1,11 +1,16 @@
 .logo {
   padding: 12px;
+  display: block;
   width: 50px;
   height: 50px;
   @media (min-width: $desk-w) {
     padding: 0;
-    width: auto;
+    width: 100%;
     height: auto;
     max-width: 156px;
+  }
+
+  svg {
+    max-width: 100%;
   }
 }

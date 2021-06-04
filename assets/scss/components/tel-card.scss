@@ -2,9 +2,11 @@
   padding: 34px 24px 4px;
   width: 255px;
   border: 1px solid #ebedef;
+
   &__img-wrapper {
     position: relative;
   }
+
   &__promo {
     position: absolute;
     top: -20px;
@@ -21,6 +23,7 @@
     border-radius: 50%;
     transform: translateX(50%);
   }
+
   figure {
     img {
       margin: 0 auto;

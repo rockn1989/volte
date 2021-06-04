@@ -1,3 +1,21 @@
+(function (ELEMENT) {
+  ELEMENT.matches =
+    ELEMENT.matches ||
+    ELEMENT.mozMatchesSelector ||
+    ELEMENT.msMatchesSelector ||
+    ELEMENT.oMatchesSelector ||
+    ELEMENT.webkitMatchesSelector;
+  ELEMENT.closest =
+    ELEMENT.closest ||
+    function closest(selector) {
+      if (!this) return null;
+      if (this.matches(selector)) return this;
+      if (!this.parentElement) {
+        return null;
+      } else return this.parentElement.closest(selector);
+    };
+})(Element.prototype);
+
 class Slider {
   constructor(className) {
     this.slider = document.querySelector(className);
@@ -34,7 +52,7 @@ class Slider {
     this.onHandleSetCurrentImg();
     this.onHandleCheckActiveSlide();
     this.onHandleToggleSlides();
-    this.onHandleSwipeSlides();
+    this.onHandleDotsCheckSlides();
   }
 
   onHandleSetCurrentImg() {
@@ -45,12 +63,11 @@ class Slider {
     this.currentImgBox.classList.add("fadeIn");
     const newImg = new Image();
     newImg.src = img.src;
-
     newImg.addEventListener("load", () => {
       this.currentImgBox.addEventListener("transitionend", () => {
-        this.currentImgBox.style.backgroundImage = `url(${img.src})`;
+        this.currentImgBox.style.backgroundImage = `url(${newImg.src})`;
         this.currentImgBox.classList.remove("fadeIn");
-        newImg.complete ? (this.isToggle = true) : console.log("no");
+        this.isToggle = true;
       });
     });
   }
@@ -63,7 +80,7 @@ class Slider {
     }
   }
 
-  onHandleSwipeSlides() {
+  onHandleDotsCheckSlides() {
     this.dotsBox.addEventListener("click", this.dotsToggleSlide);
   }
 

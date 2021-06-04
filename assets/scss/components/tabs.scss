@@ -2,18 +2,22 @@
   @include list-reset;
   display: flex;
   overflow-x: auto;
+
   li {
     margin-right: 50px;
     color: $black;
+
     &:last-child {
       margin-right: 0;
     }
+
     a {
       position: relative;
       padding-bottom: 7px;
       display: block;
       color: inherit;
       transition: color 0.3s ease;
+
       &:after {
         content: "";
         position: absolute;
@@ -28,8 +32,10 @@
         transition: transform 0.3s ease;
       }
     }
+
     &.active-tab {
       color: $green;
+
       a {
         &:after {
           transform: scale(1);
@@ -43,8 +49,10 @@
   @include list-reset;
   margin: 30px 0;
   background-color: $white;
+
   & > li {
     display: none;
+
     &.active-tab {
       display: block;
     }

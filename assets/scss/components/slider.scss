@@ -5,12 +5,14 @@
   @media (min-width: $tablet-w) {
     margin-bottom: 80px;
   }
+
   &__inner {
     position: relative;
     display: flex;
     will-change: transform;
     transition: transform 0.25s ease;
   }
+
   &__current-img {
     position: absolute;
     top: 0;
@@ -20,21 +22,25 @@
     background-position: center 0;
     background-size: cover;
     display: none;
-    transition: filter 0.65s ease;
+    transition: opacity 0.65s ease;
     will-change: background-image;
     @media (min-width: $tablet-w) {
       display: block;
     }
   }
+
   &:first-child :not(.slider__current-img) {
     border-left: none;
   }
+
   &:last-child {
     border-right: none;
   }
+
   &__controls {
     z-index: 150;
   }
+
   &__arrow {
     position: absolute;
     right: 16px;
@@ -49,15 +55,18 @@
       bottom: 40px;
       transform: translateY(0);
     }
+
     &:hover {
       @media (min-width: $tablet-w) {
         transform: translateX(10px);
       }
     }
+
     svg {
       color: $white;
     }
   }
+
   &__dots {
     @include list-reset;
     position: absolute;
@@ -67,8 +76,10 @@
     display: flex;
     justify-content: center;
     z-index: 999;
+
     li {
       padding: 5px;
+
       a {
         width: 10px;
         height: 10px;
@@ -81,12 +92,14 @@
         text-indent: 100%;
         white-space: nowrap;
       }
+
       &.active {
         a {
           background-color: $white;
         }
       }
     }
+
     @media (min-width: $tablet-w) {
       display: none;
     }
@@ -94,7 +107,18 @@
 }
 
 .fadeIn {
-  filter: blur(20px);
+  opacity: 0;
+}
+
+@supports (filter: blur(20px)) {
+  .slider__current-img {
+    transition: filter 0.65s ease;
+  }
+
+  .fadeIn {
+    opacity: 1;
+    filter: blur(20px);
+  }
 }
 
 .slide {
@@ -125,11 +149,18 @@
       height: auto;
     }
 
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
     img {
       position: relative;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
+      font-family: "object-fit: cover; object-position: center;";
       transition: opacity 0.3s ease-out;
     }
   }
@@ -144,10 +175,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     padding: 40px 20px;
     height: 100%;
-
-    //bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -176,6 +206,7 @@
 
       .slide__img {
         z-index: 19;
+
         img {
           opacity: 1;
         }

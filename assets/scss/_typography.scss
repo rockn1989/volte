@@ -66,6 +66,7 @@ a.link-arrow {
   justify-content: center;
   font-size: 12px;
   line-height: 15px;
+
   svg {
     margin-left: 6px;
   }
@@ -73,6 +74,7 @@ a.link-arrow {
 
 ul:not([class]) {
   @include list-reset;
+
   li {
     position: relative;
     margin-bottom: 10px;
@@ -87,6 +89,7 @@ ul:not([class]) {
       background: $black;
       display: block;
     }
+
     &:last-child {
       margin-bottom: 0;
     }

@@ -10,13 +10,11 @@ const criticalCss = () => {
     src: "index.html",
     minify: true,
     target: {
-      css: "css/critical.css",
       html: "index.html",
-      uncritical: "css/style.css",
+      uncritical: "/css/style.min.css",
     },
     width: 320,
     height: 480,
-    ignore: ["@font-face"],
   });
 };
 

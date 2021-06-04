@@ -8,8 +8,17 @@
   @media (min-width: $desk-w) {
     padding: 0 #{$gutter * 4};
   }
+
   &--full {
     padding: 0;
+
+    @media (min-width: $tablet-w) {
+      padding: 0;
+    }
+
+    @media (min-width: $desk-w) {
+      padding: 0;
+    }
   }
 }
 

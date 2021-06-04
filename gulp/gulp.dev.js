@@ -13,7 +13,7 @@ import {
   change,
   eslint,
   plumber,
-  sourceMap
+  sourceMap,
 } from "./gulp.common.js";
 
 /**
@@ -210,6 +210,7 @@ const start = gulp.series(
     template,
     scss,
     styleLinting,
+    js,
     copyFiles,
     removeSvgSprite,
     svgStore

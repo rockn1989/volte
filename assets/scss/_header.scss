@@ -1,26 +1,38 @@
 .header {
   flex-grow: 0;
+  flex-shrink: 0;
   color: $white;
   font-size: 12px;
   line-height: 16px;
+
   a {
     color: inherit;
+
     &:hover {
       color: $green;
     }
   }
+
   &__top-bar {
     background-color: $black;
   }
+
+  &__bottom-bar {
+    background-color: $white;
+  }
+
   &__top-bar-inner {
     padding: 6px 16px;
+
     @media (min-width: $tablet-w) {
       padding: 6px 28px;
     }
+
     @media (min-width: $desk-w) {
       padding: 6px 40px;
     }
   }
+
   &__bottom-bar-inner {
     @media (min-width: $desk-w) {
       padding: 10px 0;
