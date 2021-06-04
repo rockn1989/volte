@@ -10,7 +10,6 @@ Thumbs.db
 *.psd
 *.ai
 *.pdf
-css/*.css
 dist/
 assets/
 gulp/
