@@ -1,15 +1,15 @@
 (function () {
-  console.log("App start");
-
   /**
-   * Object-fit polyfill
+   * Components init
    */
-  if (typeof objectFitImages === "function") {
-    objectFitImages();
+
+  for (let Component in VoLTe) {
+    new VoLTe[Component]().init();
   }
 
-  /**
-   * Svg4everybody
-   */
-  svg4everybody();
+  if (!Element.prototype.closest) {
+    const closestScript = document.createElement("script");
+    closestScript.src = "js/polyfill.js";
+    document.body.appendChild(closestScript);
+  }
 })();
