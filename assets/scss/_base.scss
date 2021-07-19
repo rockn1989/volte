@@ -2,9 +2,13 @@ html,
 body {
   font-size: $fontSize;
   line-height: $lineHeight;
-  font-family: $mainFont;
+  font-family: $mainFont, "GraphikLc-fallback";
   color: $black;
   background-color: #ebedef;
+}
+
+.fallback {
+  font-family: "GraphikLc-fallback";
 }
 
 *,

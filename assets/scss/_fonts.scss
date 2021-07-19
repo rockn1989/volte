@@ -35,4 +35,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "GraphikLc-fallback";
+  size-adjust: 1100%;
+  ascent-override: normal;
+  descet-override: normal;
+  line-gap-override: normal;
+  src: local("Arial");
+}
+
 /* ______ End Main Fonts ______ */
